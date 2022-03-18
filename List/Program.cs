@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using List;
 
 namespace List
 {
@@ -7,18 +8,35 @@ namespace List
     {
         static void Main(string[] args)
         {
-            List<int> values = new List<int>();
+            // Crair Lista para armazenar nomes
+            List<string> names = new List<string>();
 
-            values.Add(14);
-            values.Add(4);
-            values.Add(78);
-            values.Add(90);
+            Console.Write("Quantos nomes a serem add a lista? ");
+            int value = int.Parse(Console.ReadLine());
 
-            int[] numbers = new int[] { 12, 45, 89 };
-            values.AddRange(numbers);
+            // Adicionar nomes na lista
+            for (int i = 0; i < value; i++)
+            {
+                Console.Write("Nome: ");
+                string name = Console.ReadLine();
+                names.Add(name);
+            }
 
-            Console.WriteLine("A lista possui: " + values.Count + " elementos");
-            Console.ReadLine();
+            // Acessar Lista
+            foreach (string name in names)
+            {
+                Console.WriteLine(name);
+            }
+           
+            // Ler Objeto
+            Console.ReadKey();
+
+
+
+            
+
+
+
         }
     }
 }
